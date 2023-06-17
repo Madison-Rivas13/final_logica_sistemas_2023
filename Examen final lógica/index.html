@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html> <link rel="stylesheet" href="estilos.css">
+<head>
+  <title>Examen final lógica</title>
+  <script>
+    function calcularOperacion() {
+      var input1 = parseFloat(document.getElementById("input1").value);
+      var input2 = parseFloat(document.getElementById("input2").value);
+      var input3 = parseFloat(document.getElementById("input3").value);
+      var resultado = document.getElementById("resultado");
+
+      if (input1 > input3) {
+        var operacion = "Multiplicación";
+        var resultadoOperacion = input1 * input2 * input3;
+      } else if (input1 === input2) {
+        var operacion = "Suma";
+        var resultadoOperacion = input1 + input2 + input3;
+      }
+
+      resultado.innerHTML = "Operación: " + operacion + "<br>Resultado: " + resultadoOperacion;
+    }
+
+    function unirValores() {
+      var input1 = parseFloat(document.getElementById("input1").value);
+      var input2 = parseFloat(document.getElementById("input2").value);
+      var input3 = parseFloat(document.getElementById("input3").value);
+      var resultadoUnido = "";
+      
+      for (var i = 0; i < input1 * input2 + input3; i++) {
+        resultadoUnido += input1.toString() + input2.toString() + input3.toString() + " ";
+      }
+      
+      var resultado = document.getElementById("resultado");
+      resultado.innerHTML = "Resultado Unido: " + resultadoUnido;
+    }
+  </script>
+</head>
+<body>
+  <label for="input1">Input 1:</label>
+  <input type="number" id="input1"><br>
+
+  <label for="input2">Input 2:</label>
+  <input type="number" id="input2"><br>
+
+  <label for="input3">Input 3:</label>
+  <input type="number" id="input3"><br>
+
+  <button onclick="calcularOperacion()">Calcular Operación</button>
+  <button onclick="unirValores()">Unir Valores</button>
+
+  <div id="resultado"></div>
+  <img src="imagen/descarga (8).jpg" class="gatoimg" alt="gatitoconbotas">
+</body>
+</html>
+

@@ -1,0 +1,14 @@
+body{
+    background-color: aqua;
+    color:black;
+}
+
+body{
+    padding: 5%;
+    margin-top: 2%;
+    align-items: center;
+}
+
+.gatoimg{
+    border-radius: 2%;
+}
